@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from "recharts";
 import { Sprout, CloudRain, Camera, Upload, TrendingUp, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
+import dashboardBg from "@/assets/dashboard-bg.jpg";
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -44,32 +45,44 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
+    <div className="min-h-screen relative">
+      {/* Background Image */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${dashboardBg})` }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10">
+        <Navbar />
       <main className="container mx-auto px-4 py-8">
         <div className="space-y-6">
+          {/* Background overlay for better readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60 pointer-events-none"></div>
           {/* Welcome Section */}
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <h1 className="text-3xl font-bold text-white drop-shadow-lg">
                 Welcome back, {user?.name}!
               </h1>
-              <p className="text-muted-foreground mt-2">
+              <p className="text-white/80 mt-2 drop-shadow">
                 {user?.role === "farmer" && "Monitor your crops and get AI-powered insights"}
                 {user?.role === "government" && "Oversee agricultural data and policy insights"}
                 {user?.role === "researcher" && "Access research data and analytics"}
               </p>
             </div>
-            <div className="text-right text-sm text-muted-foreground">
-              <p>Role: <span className="capitalize font-medium">{user?.role}</span></p>
+            <div className="text-right text-sm text-white/70 drop-shadow">
+              <p>Role: <span className="capitalize font-medium text-white">{user?.role}</span></p>
               {user?.profile?.district && (
-                <p>District: <span className="font-medium">{user.profile.district}</span></p>
+                <p>District: <span className="font-medium text-white">{user.profile.district}</span></p>
               )}
             </div>
           </div>
 
           {/* Quick Actions */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">
             <Link to="/predictions">
               <Card className="hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-6 text-center">
@@ -223,6 +236,7 @@ const Dashboard = () => {
           </div>
         </div>
       </main>
+      </div>
     </div>
   );
 };
