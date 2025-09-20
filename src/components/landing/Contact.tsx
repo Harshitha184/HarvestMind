@@ -89,7 +89,7 @@ export const Contact = () => {
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
                 Our agricultural experts and technical team are available to help you 
-                get the most out of FasalSathi's AI-powered tools.
+                get the most out of HarvestMind's AI-powered tools.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button>Schedule a Call</Button>

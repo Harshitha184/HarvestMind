@@ -11,7 +11,7 @@ export const Hero = () => {
         <div className="flex items-center justify-center mb-8">
           <Leaf className="h-16 w-16 text-white mr-4" />
           <h1 className="text-5xl md:text-7xl font-bold">
-            FasalSathi
+            HarvestMind
           </h1>
         </div>
         

@@ -89,7 +89,7 @@ const Support = () => {
               Support & Help Center
             </h1>
             <p className="text-muted-foreground mt-2">
-              Get help with FasalSathi AI platform • ସହାୟତା ପାଆନ୍ତୁ
+              Get help with HarvestMind AI platform • ସହାୟତା ପାଆନ୍ତୁ
             </p>
           </div>
 
@@ -138,7 +138,7 @@ const Support = () => {
                       </div>
                       <div className="bg-white p-2 rounded-lg shadow-sm flex-1">
                         <p className="text-sm">Hello! How can I help you today? নমস্কার! আজ আমি আপনাকে কীভাবে সাহায্য করতে পারি?</p>
-                        <span className="text-xs text-muted-foreground">FasalSathi Support</span>
+                        <span className="text-xs text-muted-foreground">HarvestMind Support</span>
                       </div>
                     </div>
                   </div>

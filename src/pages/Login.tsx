@@ -41,7 +41,7 @@ const Login = () => {
         <div className="text-center">
           <Link to="/" className="inline-flex items-center gap-2 text-2xl font-bold text-white mb-8">
             <Leaf className="h-8 w-8" />
-            <span>FasalSathi</span>
+            <span>HarvestMind</span>
           </Link>
         </div>
 

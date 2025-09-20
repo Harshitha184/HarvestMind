@@ -28,7 +28,7 @@ export const Navbar = () => {
           <Link to="/dashboard" className="flex items-center space-x-2">
             <Leaf className="h-6 w-6 text-primary" />
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              FasalSathi
+              HarvestMind
             </span>
           </Link>
           
